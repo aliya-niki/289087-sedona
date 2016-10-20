@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Aliya Nikiforova](https://up.htmlacademy.ru/htmlcss/15/user/289087).
-* Наставник: [Альбина Токарчук].
+* Наставник: [Альбина Токарчук](https://htmlacademy.ru/profile/id167491).
 
 ---
 
