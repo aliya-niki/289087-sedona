@@ -1,5 +1,6 @@
 body {
   font-family: "PT Sans", "Arial" sans-serif;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -18,4 +19,285 @@ h3 {
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  /* Только для оформления сетки */
+  background-color: #FFFF5C;
+  outline: 1px solid blue;
+}
+
+ul {
+  font-size: 0;
+  padding: 0;
+}
+
+.main-header {
+  height: 55px;
+  /* Только для оформления сетки */
+  background-color: #B7F7B5;
+  outline: 1px solid blue;
+}
+
+.menu-block {
+  font-size: 0;
+}
+
+.menu-item {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  /* Только для оформления сетки */
+  background-color: #B7F7B5;
+  outline: 1px solid blue;
+}
+
+.logo {
+  width: 140px;
+  margin: 0 auto;
+}
+
+.promo {
+  height: 510px;
+  margin-bottom: 60px;
+}
+
+.features-title {
+  width: 500px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 35px;
+}
+
+.features-text {
+  width: 500px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 55px;
+}
+
+.features-block {
+  font-size: 0;
+}
+
+.feature {
+  display: inline-block;
+  width: 400px;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: top;
+  /* Только для оформления сетки */
+  background-color: #B7F7B5;
+  outline: 1px solid blue;
+}
+
+.feature-item-first {
+  width: 1200px;
+  height: 255px;
+}
+
+.to-left {
+  float: left;
+  width: 400px;
+  /* Только для оформления сетки */
+  background-color: #FF5CAE;
+  outline: 1px solid red;
+}
+
+.city-image {
+  float: right;
+  width: 800px;
+  /* Только для оформления сетки */
+  background-color: #FF5CAE;
+  outline: 1px solid red;
+}
+
+.feature-item-two {
+  width: 1200px;
+  height: 255px;
+}
+
+.bridge-image {
+  float: left;
+  width: 800px;
+  /* Только для оформления сетки */
+  background-color: #FF5CAE;
+  outline: 1px solid red;
+}
+
+.to-right {
+  float: right;
+  width: 400px;
+  /* Только для оформления сетки */
+  background-color: #FF5CAE;
+  outline: 1px solid red;
+}
+
+.benefit {
+  height: 330px;
+}
+
+.search-upper,
+.search-lower {
+  /* Только для оформления сетки */
+  background-color: #EFDCF2;
+  outline: 1px solid blue;
+}
+
+.search-box {
+  width: 570px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  /* Только для оформления сетки */
+  background-color: #B7F7B5;
+  outline: 1px solid blue;
+}
+
+footer {
+  text-align: center;
+/* Только для оформления сетки */
+  background-color: #B7F7B5;
+  outline: 1px solid blue;
+}
+
+.footer-tag {
+  float: left;
+  width: 400px;
+  height: 120px;
+/* Только для оформления сетки */
+  background-color: #FF5CAE;
+  outline: 1px solid red;
+}
+
+.footer-socials {
+  float: left;
+  width: 400px;
+  height: 120px;
+/* Только для оформления сетки */
+  background-color: #FF5CAE;
+  outline: 1px solid red;
+}
+
+.footer-copyright {
+  float: right;
+  width: 400px;
+  height: 120px;
+/* Только для оформления сетки */
+  background-color: #FF5CAE;
+  outline: 1px solid red;
+}
+
+.select-marks {
+  height: 218px;
+}
+
+.service-checkbox {
+  float: left;
+  width: 240px;
+  margin-left: 70px;
+/*  Только для оформления сетки */
+  background-color: #FF5CAE;
+  outline: 1px solid red;
+}
+
+.housing-checkbox {
+  float: left;
+  width: 240px;
+/*  Только для оформления сетки */
+  background-color: #FF5CAE;
+  outline: 1px solid red;
+}
+
+.select-elements {
+  float: right;
+  width: 328px;
+  margin-right: 70px;
+  /*  Только для оформления сетки */
+  background-color: #FF5CAE;
+  outline: 1px solid red;
+}
+
+.results-line {
+  height: 88px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.results-line h2 {
+  float: left;
+  width: 165px;
+  /*  Только для оформления сетки */
+  background-color: #FF5CAE;
+  outline: 1px solid red;
+}
+
+.results-sort {
+  float: left;
+  width: 760px;
+  /*  Только для оформления сетки */
+  background-color: #B7F7B5;
+  outline: 1px solid red;
+}
+
+.arrows {
+  float: right;
+  width: 112px;
+  /*  Только для оформления сетки */
+  background-color: #B7F7B5;
+  outline: 1px solid red;
+}
+
+.results-list {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.result-desc {
+  min-height: 152px;
+  margin-left: 70px;
+}
+
+.hotel-photo {
+  float: left;
+  width: 165px;
+  /*  Только для оформления сетки */
+  background-color: #B7F7B5;
+  outline: 1px solid red;
+}
+
+.hotel {
+  float: left;
+  width: 760px;
+  font-size: 14px;
+  line-height: 21px;
+  /*  Только для оформления сетки */
+  background-color: #B7F7B5;
+  outline: 1px solid red;
+}
+
+.result-rating {
+  float: right;
+  width: 112px;
+  margin-right: 70px;
+  /*  Только для оформления сетки */
+  background-color: #B7F7B5;
+  outline: 1px solid red;
 }

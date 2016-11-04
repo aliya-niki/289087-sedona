@@ -27,7 +27,7 @@
       <div class="container">
         <section class="select-field">
           <div class="select-marks">
-            <form action="/" method="get">
+            <form action="/" method="get" class="clearfix">
               <div class="select-checkboxes">
                 <div class="service-checkbox">
                   <h3>Инфраструктура</h3>
@@ -82,11 +82,11 @@
           </div>
         </section>
         <div class="results-field">
-          <div class="results-line">
+          <div class="results-line clearfix">
             <h2>Найдено: 3</h2>
             <div class="results-sort">
               <h3>Сортировка</h3>
-              <a class="current">По цене</a>
+              <a class="sort-type current">По цене</a>
               <a class="sort-type" href="#">По типу</a>
               <a class="sort-type" href="#">По рейтингу</a>
             </div>
@@ -98,41 +98,53 @@
           <div class="results">
             <ul>
               <li class="results-list">
-                <article class="result-desc">
-                  <a href="#">
+                <article class="result-desc clearfix">
+                  <a class="hotel-photo" href="#">
                     <img src="img/amara.jpg" alt="Amara Resort&SPA">
-                    <h2 class="result-name">Amara Resort&SPA</h2>
                   </a>
-                  <b>Гостиница</b>
-                  <b>от 3500 р.</b>
-                  <a class="btn desc-btn" href="#">Подробнее</a>
-                  <a class="btn booking-btn" href="#">Забронировать</a>
+                  <section class="hotel">
+                    <a href="#">
+                      <h2 class="hotel-name">Amara Resort&SPA</h2>
+                    </a>
+                    <b>Гостиница</b>
+                    <b>от 3500 р.</b>
+                    <a class="btn desc-btn" href="#">Подробнее</a>
+                    <a class="btn booking-btn" href="#">Забронировать</a>
+                  </section>
                   <div class="result-rating">Рейтинг: 8,5</div>
                 </article>
               </li>
               <li class="results-list">
-                <article class="result-desc">
-                  <a href="#">
+                <article class="result-desc clearfix">
+                  <a class="hotel-photo" href="#">
                     <img src="img/desert.jpg" alt="Desert Quail Inn">
-                    <h2 class="result-name">Desert Quail Inn</h2>
                   </a>
-                  <b>Мотель</b>
-                  <b>От 2000 р.</b>
-                  <a class="btn desc-btn" href="#">Подробнее</a>
-                  <a class="btn booking-btn" href="#">Забронировать</a>
+                  <section class="hotel">
+                    <a href="">
+                      <h2 class="result-name">Desert Quail Inn</h2>
+                    </a>
+                    <b>Мотель</b>
+                    <b>От 2000 р.</b>
+                    <a class="btn desc-btn" href="#">Подробнее</a>
+                    <a class="btn booking-btn" href="#">Забронировать</a>
+                  </section>
                   <div class="result-rating">Рейтинг: 8,9</div>
                 </article>
               </li>
               <li class="results-list">
-                <article class="result-desc">
-                  <a href="#">
+                <article class="result-desc clearfix">
+                  <a class="hotel-photo" href="#">
                     <img src="img/villas.jpg" alt="Villas At Poco Diablo">
-                    <h2 class="result-name">Villas At Poco Diablo</h2>
                   </a>
-                  <b>Апартаменты</b>
-                  <b>От 4000 р.</b>
-                  <a class="btn desc-btn" href="#">Подробнее</a>
-                  <a class="btn booking-btn" href="#">Забронировать</a>
+                  <section class="hotel">
+                    <a href="#">
+                      <h2 class="result-name">Villas At Poco Diablo</h2>
+                    </a>
+                    <b>Апартаменты</b>
+                    <b>От 4000 р.</b>
+                    <a class="btn desc-btn" href="#">Подробнее</a>
+                    <a class="btn booking-btn" href="#">Забронировать</a>
+                  </section>
                   <div class="result-rating">Рейтинг: 9,2</div>
                 </article>
               </li>
@@ -150,7 +162,7 @@
         <a class="social-btn social-btn-youtube" href="#"><img src="" alt="youtube"></a>
       </section>
       <section class="footer-copyright">
-        <p>Website by</p>
+        <span>Website by</span>
         <a class="btn" href="https://htmlacademy.ru"><img src="img/copy-logo.png" alt="htmlacademy"></a>
       </section>
     </div>
