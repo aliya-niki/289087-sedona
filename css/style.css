@@ -1,5 +1,5 @@
 body {
-  font-family: "PT Sans", "Arial" sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
 }
 
@@ -207,6 +207,14 @@ footer {
 
 .select-marks {
   height: 218px;
+}
+
+.select-checkboxes {
+  float: left;
+  width: 790px;
+/*  Только для оформления сетки */
+  background-color: #B7F7B5;
+  outline: 1px solid blue;
 }
 
 .service-checkbox {
