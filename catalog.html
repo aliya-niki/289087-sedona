@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <title>Поиск отеля - Седона</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
-    <header class="site-header">
+    <header class="main-header">
       <div class="container">
         <div class="logo">
           <a href="index.html">
-            <img class="logo-pic" src="img/logo.png" alt="Sedona" width="" height="">
+            <img src="img/logo.png" alt="Sedona" width="138" height="70">
           </a>
         </div>
         <nav class="menu-block">
@@ -18,14 +19,14 @@
             <li class="menu-item"><a href="#">Информация</a></li>
             <li class="menu-item"><a href="#">Фото и видео</a></li>
             <li class="menu-item"><a href="#">Карта штата</a></li>
-            <li class="menu-item"><a href="catalog.html">Гостиницы</a></li>
+            <li class="menu-item"><a class="active" href="catalog.html">Гостиницы</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="page-content">
-      <div class="container">
-        <section class="select-field">
+      <section class="select-field">
+        <div class="container">
           <div class="select-marks">
             <form action="/" method="get" class="clearfix">
               <div class="select-checkboxes clearfix">
@@ -60,93 +61,92 @@
                   </div>
                 </div>
               </div>
-              <div class="select-elements">
-                <div class="price-fields">
-                  <h3>Стоимость в сутки (р.)</h3>
-                  <div class="price-range">
-                    <div class="range">
-                      <label for="price-min">От</label>
-                      <input type="text" name="price-min" id="price-min">
-                    </div>
-                    <div class="range">
-                      <label for="price-max">До</label>
-                      <input type="text" name="price-max" id="price-max">
-                    </div>
-                  </div>
-                  <input type="range" name="price" id="price" step="1" min="0" max="10000"
-                    value="1" multiple>
+              <div class="price-field">
+                <h3>Стоимость в сутки (р.)</h3>
+                <div class="price-control">
+                  <label class="price-min">От <input type="text" name="price-min" value="0"></label>
+                  <label class="price-max">До <input type="text" name="price-max" value="3000"></label>
                 </div>
-                <button class="show-btn">Показать</button>
+                <div class="range-control">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min"></div>
+                  <div class="range-toggle range-toggle-max"></div>
+                </div>
+                <button class="show-btn" type="submit">Показать</button>
               </div>
             </form>
           </div>
-        </section>
-        <div class="results-field">
+        </div>
+      </section>
+      <div class="results-field">
+        <div class="container">
           <div class="results-line clearfix">
             <h2>Найдено: 3</h2>
             <div class="results-sort">
-              <h3>Сортировка</h3>
+              <h3>Сортировка:</h3>
               <a class="sort-type current">По цене</a>
               <a class="sort-type" href="#">По типу</a>
               <a class="sort-type" href="#">По рейтингу</a>
             </div>
             <div class="arrows">
               <a href="#" class="arrow-up"></a>
-              <a href="#" class="arrow-down"></a>
+              <a class="arrow-down active-arrow"></a>
             </div>
           </div>
           <div class="results">
             <ul>
               <li class="results-list">
-                <article class="result-desc clearfix">
+                <section class="hotel">
                   <a class="hotel-photo" href="#">
                     <img src="img/amara.jpg" alt="Amara Resort&SPA">
                   </a>
-                  <section class="hotel">
-                    <a href="#">
-                      <h2 class="hotel-name">Amara Resort&SPA</h2>
-                    </a>
-                    <b>Гостиница</b>
-                    <b>от 3500 р.</b>
-                    <a class="btn desc-btn" href="#">Подробнее</a>
-                    <a class="btn booking-btn" href="#">Забронировать</a>
-                  </section>
+                  <a href="#">
+                    <h2 class="hotel-name">Amara Resort&SPA</h2>
+                  </a>
+                  <b>Гостиница</b>
+                  <b>от 3500 р.</b>
+                  <div class="buttons">
+                    <a class="hotel-btn desc-btn" href="#">Подробнее</a>
+                    <a class="hotel-btn booking-btn" href="#">Забронировать</a>
+                  </div>
                   <div class="result-rating">Рейтинг: 8,5</div>
-                </article>
+                </section>
               </li>
               <li class="results-list">
-                <article class="result-desc clearfix">
+                <section class="hotel">
                   <a class="hotel-photo" href="#">
                     <img src="img/desert.jpg" alt="Desert Quail Inn">
                   </a>
-                  <section class="hotel">
-                    <a href="">
-                      <h2 class="result-name">Desert Quail Inn</h2>
-                    </a>
+                  <a href="#">
+                    <h2 class="hotel-name">Desert Quail Inn</h2>
+                  </a>
                     <b>Мотель</b>
                     <b>От 2000 р.</b>
-                    <a class="btn desc-btn" href="#">Подробнее</a>
-                    <a class="btn booking-btn" href="#">Забронировать</a>
-                  </section>
+                  <div class="buttons">
+                    <a class="hotel-btn desc-btn" href="#">Подробнее</a>
+                    <a class="hotel-btn booking-btn" href="#">Забронировать</a>
+                  </div>
                   <div class="result-rating">Рейтинг: 8,9</div>
-                </article>
+                </section>
               </li>
               <li class="results-list">
-                <article class="result-desc clearfix">
+                <section class="hotel">
                   <a class="hotel-photo" href="#">
                     <img src="img/villas.jpg" alt="Villas At Poco Diablo">
                   </a>
-                  <section class="hotel">
-                    <a href="#">
-                      <h2 class="result-name">Villas At Poco Diablo</h2>
-                    </a>
-                    <b>Апартаменты</b>
-                    <b>От 4000 р.</b>
-                    <a class="btn desc-btn" href="#">Подробнее</a>
-                    <a class="btn booking-btn" href="#">Забронировать</a>
-                  </section>
+                  <a href="#">
+                    <h2 class="hotel-name">Villas At Poco Diablo</h2>
+                  </a>
+                  <b class="hotel-type">Апартаменты</b>
+                  <b class="hotel-price">От 4000 р.</b>
+                  <div class="buttons">
+                    <a class="hotel-btn desc-btn" href="#">Подробнее</a>
+                    <a class="hotel-btn booking-btn" href="#">Забронировать</a>
+                  </div>
                   <div class="result-rating">Рейтинг: 9,2</div>
-                </article>
+                </section>
               </li>
             </ul>
           </div>
@@ -154,16 +154,16 @@
     </div>
   </main>
   <footer>
-    <div class="container">
+    <div class="container clearfix">
       <div class="footer-tag">#visitsedona</div>
       <section class="footer-socials">
-        <a class="social-btn social-btn-twitter" href="#"><img src="" alt="twitter"></a>
-        <a class="social-btn social-btn-fb" href="#"><img src="" alt="facebook"></a>
-        <a class="social-btn social-btn-youtube" href="#"><img src="" alt="youtube"></a>
+        <a class="social-btn social-btn-twitter" href="#"></a>
+        <a class="social-btn social-btn-fb" href="#"></a>
+        <a class="social-btn social-btn-youtube" href="#"></a>
       </section>
       <section class="footer-copyright">
         <span>Website by</span>
-        <a class="btn" href="https://htmlacademy.ru"><img src="img/copy-logo.png" alt="htmlacademy"></a>
+        <a class="copyright" href="https://htmlacademy.ru"></a>
       </section>
     </div>
   </footer>
