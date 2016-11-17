@@ -342,7 +342,8 @@ body {
 }
 
 #map-canvas {
-  height: 100%;
+  height: 590px;
+  overflow: hidden;
   position: relative;
 }
 
@@ -366,10 +367,25 @@ body {
 .modal-content-show {
   display: block;
   z-index: 1000;
+  animation: rotate 0.5s;
 }
 
 .modal-content form {
   padding: 55px;
+}
+
+@keyframes rotate {
+  0% { transform: rotateZ(180deg);}
+  100% { transform: rotateZ(0);}
+}
+
+.modal-error {
+  animation: turn 0.3s;
+}
+
+@keyframes turn {
+  50% { transform: rotateX(180deg);}
+  100% { transform: rotateX(0deg); }
 }
 
 .search-field {
@@ -1120,6 +1136,7 @@ input[type="checkbox"]:disabled + label::before {
 
 footer {
   background-color: : rgba(254, 254, 254, 0.5);
+  opacity: 0.9;
 
   outline: 1px solid blue;
 }
