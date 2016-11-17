@@ -14,7 +14,7 @@ body {
   line-height: 21px;
   text-transform: uppercase;
   color: rgb(0, 0, 0);
-  background-color: rgb(254, 254, 254);
+  background-color: #F2F2F2;
 }
 
 .clearfix::after {
@@ -27,7 +27,7 @@ body {
   width: 1056px;
   margin: 0 auto;
   padding: 0 72px;
-
+  background-color: rgb(254, 254, 254);
   outline: 1px solid blue;
 }
 
@@ -39,8 +39,6 @@ body {
   /*  HEADER  */
 
 .main-header {
-  background-color: rgb(254, 254, 254);
-
   outline: 2px solid red;
 }
 
@@ -117,7 +115,6 @@ body {
   width: 138px;
   height: 70px;
 }
-
 
   /* Главная страница */
 
@@ -295,12 +292,12 @@ body {
 }
 
 
-  /* ПОИСК ГОСТИНИЦ В СЕДОНЕ */
+  /* "Поиск гостиницы в Седоне" */
 .features {
-  margin-bottom: 52px;
+  margin-bottom: 49px;
 }
 
-.search-box {
+.search-upper {
   width: 568px;
   margin-right: auto;
   margin-left: auto;
@@ -310,15 +307,16 @@ body {
   outline: 1px solid blue;
 }
 
-.search-box h2 {
+.search-upper h2 {
   margin: 0;
   padding: 0;
-  margin-bottom: 34px;
+  margin-bottom: 22px;
   font-size: 30px;
+  line-height: 38px;
   font-weight: 700;
 }
 
-.search-box p {
+.search-upper p {
   margin-bottom: 47px;
   font-size: 14px;
   line-height: 24px;
@@ -339,25 +337,44 @@ body {
 }
 
 .search-lower {
-  padding-bottom: 78px;
-  background: url("../img/map.jpg") no-repeat center top;
-  background-size: 1200px auto;
+  position: relative;
+  height: 473px;
 }
 
-.search-lower .search-box {
-  z-index: 100;
+#map-canvas {
+  height: 100%;
+  position: relative;
+}
+
+.modal-content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -284px;
+
+  display: none;
+  width: 568px;
+
+  text-align: center;
+
+  outline: 1px solid blue;
 
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 5px 10px 5px rgba(169, 169, 169, 0.5);
 }
 
-.search-box form {
+.modal-content-show {
+  display: block;
+  z-index: 1000;
+}
+
+.modal-content form {
   padding: 55px;
 }
 
 .search-field {
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 26px;
   padding: 0;
   font-size: 0;
 }
@@ -372,18 +389,19 @@ body {
   text-align: left;
   font-size: 14px;
   font-weight: 700;
-  line-height: 21px;
+  line-height: 26px;
 }
 
 .search-field:nth-child(4) label {
-  width: 68px;
+  width: 66px;
 }
 
 .search-field input {
-  text-align: left;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 700;
-  line-height: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
   background-color: rgb(242, 242, 242);
   border: none;
   cursor: pointer;
@@ -393,7 +411,8 @@ body {
 .date-field {
   width: 278px;
   margin: 0;
-  padding: 8px 15px;
+  padding: 6px 15px;
+  padding-bottom: 14px\0;
 }
 
 .date-field:hover {
@@ -409,7 +428,7 @@ body {
   display: inline-block;
 
   width: 38px;
-  height: 37px;
+  height: 38px;
 
   vertical-align: top;
   background-color: rgb(242, 242, 242);
@@ -446,29 +465,27 @@ body {
 }
 
 .search-field:nth-child(3) {
-  width: 224px;
-  margin-right: 50px;
+  width: 226px;
+  margin-right: 48px;
 }
 
 .search-field:nth-child(4)  {
   width: 180px;
 }
 
-.search-field:last-child label {
-  width: 68px;
-}
-
 .number-field {
-  width: 16px;
+  width: 38px;
   margin: 0;
-  padding: 8px 10px;
+  padding: 6px 0;
+  padding-bottom: 14px\0;
+  text-align: center;
 }
 
 .number-icon {
   position: relative;
   display: inline-block;
   width: 38px;
-  height: 37px;
+  height: 38px;
 
   vertical-align: top;
   background-color: rgb(242, 242, 242);
@@ -526,9 +543,11 @@ body {
   padding: 15px 30px;
   width: 100%;
 
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
+  font-weight: 700;
   line-height: 26px;
-  font-weight: bold;
+  text-transform: uppercase;
   color: rgb(255, 255, 255);
   background: rgb(129, 179, 210);
   border: none;
@@ -555,9 +574,14 @@ body {
   background-size: 1200 auto;
 }
 
+.select-field .container {
+  background-color: transparent;
+}
+
 .select-marks {
-  padding-bottom: 34px;
-  padding-top: 24px;
+  margin: 0;
+  padding-bottom: 33px;
+  padding-top: 25px;
 }
 
 .select-marks h3 {
@@ -600,7 +624,7 @@ input[type="checkbox"] + label {
   display: block;
   margin-top: 25px;
   padding-left: 40px;
-  line-height: 20px;
+  line-height: 21px;
   cursor: pointer;
 }
 
@@ -693,6 +717,7 @@ input[type="checkbox"]:disabled + label::before {
 .price-control input {
   width: 50px;
   margin: 0;
+  padding-bottom: 14px\0;
 
   color: inherit;
   font: inherit;
@@ -764,12 +789,15 @@ input[type="checkbox"]:disabled + label::before {
   background: #ffffff;
 }
 
-
 .results-line h2 {
   float: left;
   width: 165px;
   margin: 0;
-  padding: 32px 0;
+  padding: 28px 0;
+
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
 
   outline: 1px solid red;
 }
@@ -777,8 +805,8 @@ input[type="checkbox"]:disabled + label::before {
 .results-sort {
   float: left;
   width: 760px;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 33px;
+  padding-bottom: 31px;
 
   font-size: 0;
 
@@ -798,7 +826,7 @@ input[type="checkbox"]:disabled + label::before {
 
 .sort-type {
   display: inline-block;
-  margin-right: 31px;
+  margin-right: 33px;
 
   font-size: 12px;
   font-weight: 400;
@@ -827,8 +855,8 @@ input[type="checkbox"]:disabled + label::before {
   float: right;
   max-width: 50px;
   padding: 0;
-  padding-top: 35px;
-  padding-bottom: 31px;
+  padding-top: 36px;
+  padding-bottom: 29px;
 
   font-size: 0;
   outline: 1px solid red;
@@ -904,7 +932,7 @@ input[type="checkbox"]:disabled + label::before {
 .hotel-photo {
   position: absolute;
   content: "";
-  top: 31px;
+  top: 30px;
   left: 0;
   width: 135px;
   height: 90px;
@@ -937,7 +965,7 @@ input[type="checkbox"]:disabled + label::before {
 
 .hotel-name {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   padding: 0;
 
   font-size: 21px;
@@ -960,7 +988,7 @@ input[type="checkbox"]:disabled + label::before {
   display: inline-block;
   width: 102px;
   margin-right: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   padding: 0;
 
   font-size: 14px;
@@ -975,7 +1003,7 @@ input[type="checkbox"]:disabled + label::before {
 .hotel-btn {
   display: inline-block;
   margin-right: 8px;
-  padding: 3px 16px;
+  padding: 3px 17px;
 
   font-size: 14px;
   font-weight: 700;
@@ -1017,7 +1045,7 @@ input[type="checkbox"]:disabled + label::before {
 .result-rating {
   position: absolute;
   content: "";
-  bottom: 31px;
+  bottom: 33px;
   right: 0;
 
   width: 110px;
@@ -1032,16 +1060,60 @@ input[type="checkbox"]:disabled + label::before {
   outline: 1px solid red;
 }
 
-.result-rating::before {
+.results-list:first-child .result-rating::before {
   content: "";
   position: absolute;
-  top: -67px;
+  top: -61px;
   right: 0;
-  width: 21px;
+  width: 92px;
   height: 21px;
 
-  background-image: url("../img/sprite.png");
-  background-position: -281px -100px;
+  background-image: url("../img/stars.png");
+  background-repeat: repeat-x;
+}
+
+.results-list:nth-child(2) .result-rating::before {
+  content: "";
+  position: absolute;
+  top: -61px;
+  right: 0;
+  width: 46px;
+  height: 21px;
+
+  background-image: url("../img/stars.png");
+  background-repeat: repeat-x;
+}
+
+.results-list:last-child .result-rating::before {
+  content: "";
+  position: absolute;
+  top: -61px;
+  right: 0;
+  width: 69px;
+  height: 21px;
+
+  background-image: url("../img/stars.png");
+  background-repeat: repeat-x;
+}
+
+.results-list:first-child .hotel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -72px;
+  width: 1200px;
+  height: 1px;
+  background-color: rgb(229, 229, 229);
+}
+
+.hotel::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -72px;
+  width: 1200px;
+  height: 1px;
+  background-color: rgb(229, 229, 229);
 }
 
 /* Футер сайта */
@@ -1161,8 +1233,8 @@ footer .container {
 .copyright::before {
   content: "";
   position: absolute;
-  top: -8px;
-  left: 3px;
+  top: -10px;
+  left: 10px;
 
   width: 113px;
   height: 39px;

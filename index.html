@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Главная - Седона</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -27,14 +26,14 @@
       <div class="container">
         <div class="promo"></div>
         <section class="features">
-          <h1 class="features-title">Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h1>
-          <p class="features-begin">Рассмотрим 5 причин , по которым Седона круче, чем Гранд Каньон:</p>
+          <h1 class="features-title">Седона &mdash; небольшой городок в Аризоне,<br> заслуживающий большего!</h1>
+          <p class="features-begin">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон:</p>
 
           <div class="feature-block feature-display clearfix">
             <div class="to-left feature-text">
               <h3 class="feature-name">Настоящий<br> городок</h3>
               <p class="feature-number">&#8210; №1 &#8210;</p>
-              <p class="feature-desc">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+              <p class="feature-desc">Седона &mdash; не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
             <div class="city-image"></div>
           </div>
@@ -84,16 +83,15 @@
 
         <section class="search">
           <div class="search-upper">
-            <div class="search-box">
-              <h2>Заинтересовались?</h2>
-              <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-              <div class="search-header">
-                <a href="catalog.html">Поиск гостиницы в Седоне</a>
-              </div>
+            <h2>Заинтересовались?</h2>
+            <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+            <div class="search-header">
+              <a href="catalog.html">Поиск гостиницы в Седоне</a>
             </div>
           </div>
           <div class="search-lower">
-            <div class="search-box">
+            <div id="map-canvas"></div>
+            <div class="modal-content">
               <form action="/" method="get">
                 <div class="search-field">
                   <label for="arrival-date">Дата заезда:</label>
@@ -138,5 +136,42 @@
         </section>
       </div>
     </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+      function initialize() {
+        var mapCoordinates = new google.maps.LatLng(34.86898673,-111.75292969);
+        var mapOptions = {
+        zoom: 9,
+        center: mapCoordinates,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+                                    mapOptions);
+
+        var icon = new google.maps.MarkerImage ({
+              url: "img/ubicacion.png",
+              scaledSize: new google.maps.Size(50, 50),
+              origin: new google.maps.Point(0,0),
+              anchor: new google.maps.Point(0, 0)
+            });
+
+        var marker = new google.maps.Marker ({
+          position: mapCoordinates,
+          map: map,
+          icon: icon
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <script type="text/javascript">
+      var link = document.querySelector(".search-header");
+      var popup = document.querySelector(".modal-content");
+
+      link.addEventListener("click", function(event)
+         {
+        event.preventDefault();
+        popup.classList.toggle("modal-content-show");
+      })
+    </script>
   </body>
 </html>
