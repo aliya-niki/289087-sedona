@@ -28,7 +28,6 @@ body {
   margin: 0 auto;
   padding: 0 72px;
   background-color: rgb(254, 254, 254);
-  outline: 1px solid blue;
 }
 
 .main-page .container {
@@ -39,11 +38,9 @@ body {
   /*  HEADER  */
 
 .main-header {
-  outline: 2px solid red;
 }
 
 .menu-block {
-  outline: 2px solid green;
 }
 
 .menu-block ul {
@@ -60,8 +57,6 @@ body {
   padding: 14px 0;
 
   vertical-align: top;
-
-  outline: 1px solid blue;
 }
 
 .menu-item a {
@@ -164,8 +159,6 @@ body {
 
   text-align: center;
   vertical-align: top;
-
-  outline: 1px solid blue;
 }
 
 .feature-block {
@@ -303,8 +296,6 @@ body {
   margin-left: auto;
 
   text-align: center;
-
-  outline: 1px solid blue;
 }
 
 .search-upper h2 {
@@ -357,8 +348,6 @@ body {
   width: 568px;
 
   text-align: center;
-
-  outline: 1px solid blue;
 
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 5px 10px 5px rgba(169, 169, 169, 0.5);
@@ -612,23 +601,17 @@ body {
 .select-checkboxes {
   float: left;
   width: 710px;
-
-  outline: 1px solid blue;
 }
 
 .service-checkbox {
   float: left;
   width: 240px;
   margin-right: 15px;
-
-  outline: 1px solid red;
 }
 
 .housing-checkbox {
   float: left;
   width: 240px;
-
-  outline: 1px solid red;
 }
 
 input[type="checkbox"] {
@@ -680,8 +663,6 @@ input[type="checkbox"]:disabled + label::before {
 .price-field {
   float: right;
   width: 328px;
-
-  outline: 1px solid red;
 }
 
 .price-field h3 {
@@ -814,8 +795,6 @@ input[type="checkbox"]:disabled + label::before {
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
-
-  outline: 1px solid red;
 }
 
 .results-sort {
@@ -825,8 +804,6 @@ input[type="checkbox"]:disabled + label::before {
   padding-bottom: 31px;
 
   font-size: 0;
-
-  outline: 1px solid red;
 }
 
 .results-sort h3 {
@@ -875,7 +852,6 @@ input[type="checkbox"]:disabled + label::before {
   padding-bottom: 29px;
 
   font-size: 0;
-  outline: 1px solid red;
 }
 
 .arrows a {
@@ -952,8 +928,6 @@ input[type="checkbox"]:disabled + label::before {
   left: 0;
   width: 135px;
   height: 90px;
-
-  outline: 1px solid red;
 }
 
 .hotel-photo img {
@@ -971,8 +945,6 @@ input[type="checkbox"]:disabled + label::before {
   font-weight: 400;
   line-height: 21px;
   color: rgb(0, 0, 0);
-
-  outline: 1px solid red;
 }
 
 .hotel a {
@@ -989,7 +961,6 @@ input[type="checkbox"]:disabled + label::before {
   line-height: 26px;
   text-align: left;
   color: rgb(0, 0, 0);
-  outline: 1px solid blue;
 }
 
 .hotel-name:hover {
@@ -1072,8 +1043,6 @@ input[type="checkbox"]:disabled + label::before {
   line-height: 21px;
   text-align: center;
   background-color: rgb(242, 242, 242);
-
-  outline: 1px solid red;
 }
 
 .results-list:first-child .result-rating::before {
@@ -1137,8 +1106,6 @@ input[type="checkbox"]:disabled + label::before {
 footer {
   background-color: : rgba(254, 254, 254, 0.5);
   opacity: 0.9;
-
-  outline: 1px solid blue;
 }
 
 footer .container {
@@ -1156,8 +1123,6 @@ footer .container {
   line-height: 26px;
   font-weight: 700;
   text-align: center;
-
-  outline: 1px solid red;
 }
 
 .footer-socials {
@@ -1168,8 +1133,6 @@ footer .container {
 
   text-align: center;
   font-size: 0;
-
-  outline: 1px solid red;
 }
 
 .social-btn {
@@ -1231,8 +1194,6 @@ footer .container {
   padding: 0;
   padding-top: 49px;
   padding-bottom: 47px;
-
-  outline: 1px solid red;
 }
 
 .footer-copyright span {
