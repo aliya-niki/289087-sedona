@@ -65,7 +65,7 @@ body {
 .menu-item a {
   font-size: 14px;
   line-height: 26px;
-  font-weight: 700;
+  font-weight: 600;
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
@@ -121,7 +121,7 @@ body {
   min-height: 507px;
   margin: 0;
   margin-bottom: 58px;
-  background: url("../img/promo.jpg") no-repeat center bottom;
+  background:  rgb(66, 119, 160) url("../img/promo.jpg") no-repeat center bottom;
   background-size: cover;
 }
 
@@ -140,7 +140,7 @@ body {
   margin-bottom: 27px;
 
   font-size: 21px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 26px;
   text-align: center;
 }
@@ -222,7 +222,7 @@ body {
   margin-bottom: 23px;
 
   font-size: 21px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 22px;
 }
 
@@ -309,7 +309,7 @@ body {
   margin-bottom: 22px;
   font-size: 30px;
   line-height: 38px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .search-upper p {
@@ -337,10 +337,12 @@ body {
   height: 473px;
 }
 
-#map-canvas {
+.map-canvas {
   height: 590px;
   overflow: hidden;
   position: relative;
+
+  background-image: url("../img/map.jpg");
 }
 
 .modal-content {
@@ -348,34 +350,36 @@ body {
   top: 0;
   left: 50%;
   margin-left: -284px;
-
-  display: none;
   width: 568px;
 
+  display: block;
   text-align: center;
 
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 5px 10px 5px rgba(169, 169, 169, 0.5);
 }
 
+.modal-hidden {
+  display: none;
+}
+
 .modal-content-show {
   display: block;
   z-index: 1000;
-  animation: rotate 0.5s;
+  animation: down 0.5s;
 }
 
 .modal-content form {
   padding: 55px;
 }
 
-@-webkit-keyframes rotate {
-  0% { -webkit-transform: rotateZ(180deg); transform: rotateZ(180deg);}
-  100% { -webkit-transform: rotateZ(0); transform: rotateZ(0);}
+@-webkit-keyframes down {
+  0% { -webkit-transform: translateY(-2000px); transform: translateY(-2000px)}
+  100% { -webkit-transform: translateY(0); transform: translateY(0);}
 }
-
-@keyframes rotate {
-  0% { -webkit-transform: rotateZ(180deg); transform: rotateZ(180deg);}
-  100% { -webkit-transform: rotateZ(0); transform: rotateZ(0);}
+@keyframes down {
+  0% { -webkit-transform: translateY(-2000px); transform: translateY(-2000px)}
+  100% { -webkit-transform: translateY(0); transform: translateY(0);}
 }
 
 .modal-error {
@@ -410,7 +414,7 @@ body {
   vertical-align: top;
   text-align: left;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 26px;
 }
 
@@ -421,7 +425,7 @@ body {
 .search-field input {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 26px;
   text-transform: uppercase;
   background-color: rgb(242, 242, 242);
@@ -555,7 +559,7 @@ body {
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 26px;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
@@ -579,9 +583,8 @@ body {
 
 .select-field {
   color: rgb(254, 254, 254);
-
-  background: url("../img/bg-search.jpg") no-repeat center center;
-  background-size: 1200 auto;
+  background: rgb(64, 117, 159) url("../img/bg-search.jpg") no-repeat 50% 20%;
+  background-size: cover;
 }
 
 .select-field .container {
@@ -599,7 +602,7 @@ body {
   padding: 0;
 
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 21px;
 }
 
@@ -633,10 +636,7 @@ input[type="checkbox"] + label {
 }
 
 input[type="checkbox"] + label::before {
-  content: "";/*
-  width: 20px;
-  height: 20px;
-*/
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -673,7 +673,7 @@ input[type="checkbox"]:disabled + label::before {
 .price-field h3 {
   margin-bottom: 9px;
 
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   line-height: 21px;
 }
@@ -798,7 +798,7 @@ input[type="checkbox"]:disabled + label::before {
   padding: 29px 0;
 
   font-size: 21px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 26px;
 }
 
@@ -983,7 +983,7 @@ input[type="checkbox"]:disabled + label::before {
   padding: 0;
 
   font-size: 21px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 26px;
   text-align: left;
 }
@@ -1149,7 +1149,7 @@ footer .container {
 
   font-size: 21px;
   line-height: 26px;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
 

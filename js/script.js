@@ -6,6 +6,10 @@ var number1 = popup.querySelector("[name=adults-number]");
 var number2 = popup.querySelector("[name=children-number]");
 var form = popup.querySelector("form");
 
+window.onload=function(){
+  popup.classList.add("modal-hidden");
+}
+
 link.addEventListener("click", function(event) {
   event.preventDefault();
   popup.classList.toggle("modal-content-show");

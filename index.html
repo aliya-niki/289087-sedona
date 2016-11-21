@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Главная - Седона</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,600&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
     <header class="main-header">
@@ -90,17 +91,17 @@
             </div>
           </div>
           <div class="search-lower">
-            <div id="map-canvas"></div>
+            <div class="map-canvas"></div>
             <div class="modal-content">
               <form action="/" method="get">
                 <div class="search-field">
                   <label for="arrival-date">Дата заезда:</label>
-                  <input class="date-field" type="date" name="arrival-date" id="arrival-date">
+                  <input class="date-field" type="text" name="arrival-date" id="arrival-date">
                   <a class="calendar-icon" href="#"></a>
                 </div>
                 <div class="search-field">
                   <label for="departure-date">Дата выезда:</label>
-                  <input class="date-field" type="date" name="departure-date" id="departure-date">
+                  <input class="date-field" type="text" name="departure-date" id="departure-date">
                   <a class="calendar-icon" href="#"></a>
                 </div>
                 <div class="search-field">
@@ -137,8 +138,8 @@
       </div>
     </footer>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="js/map.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/map.min.js"></script>
+    <script type="text/javascript" src="js/script.min.js"></script>
 
   </body>
 </html>
