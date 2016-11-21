@@ -122,7 +122,7 @@
         </section>
       </div>
     </main>
-    <footer>
+    <footer class="main-footer">
       <div class="container clearfix">
         <div class="footer-tag">#visitsedona</div>
         <section class="footer-socials">
@@ -136,59 +136,9 @@
         </section>
       </div>
     </footer>
-    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script>
-      function initialize() {
-        var mapCoordinates = new google.maps.LatLng(34.86898673,-111.75292969);
-        var mapOptions = {
-        zoom: 9,
-        center: mapCoordinates,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
-                                    mapOptions);
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 
-        var icon = new google.maps.MarkerImage ({
-              url: "img/ubicacion.png",
-              scaledSize: new google.maps.Size(50, 50),
-              origin: new google.maps.Point(0,0),
-              anchor: new google.maps.Point(0, 0)
-            });
-
-        var marker = new google.maps.Marker ({
-          position: mapCoordinates,
-          map: map,
-          icon: icon
-        });
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-    <script>
-      var link = document.querySelector(".search-header");
-      var popup = document.querySelector(".modal-content");
-      var date1 = popup.querySelector("[name=arrival-date]");
-      var date2 = popup.querySelector("[name=departure-date]");
-      var number1 = popup.querySelector("[name=adults-number]");
-      var number2 = popup.querySelector("[name=children-number]");
-      var form = popup.querySelector("form");
-
-      link.addEventListener("click", function(event) {
-        event.preventDefault();
-        popup.classList.toggle("modal-content-show");
-        popup.classList.remove("modal-error");
-      });
-
-      form.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        if ( !date1.value || !date2.value || !number1.value || !number2.value ) {
-          console.log("Заполните все данные");
-          popup.classList.remove("modal-error");
-          popup.offsetWidth = popup.offsetWidth;
-          popup.classList.add("modal-error");
-        }
-      });
-
-    </script>
   </body>
 </html>

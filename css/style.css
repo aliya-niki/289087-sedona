@@ -4,8 +4,8 @@ html {
 }
 
 body {
-  min-width: 1200px;
-  margin: 0;
+  width: 1200px;
+  margin: 0 auto;
   padding: 0;
 
   font-family: "PT Sans", "Arial", sans-serif;
@@ -15,6 +15,9 @@ body {
   text-transform: uppercase;
   color: rgb(0, 0, 0);
   background-color: #F2F2F2;
+  box-shadow:
+              5px 0px 5px 0px rgba(169, 169, 169, 0.5),
+              -5px 0px 5px 0px rgba(169, 169, 169, 0.5);
 }
 
 .clearfix::after {
@@ -214,16 +217,18 @@ body {
 }
 
 .feature-text .feature-name {
-  padding-top: 28px;
-  margin-bottom: 20px;
+  margin-top: 45px;
+  padding: 0;
+  margin-bottom: 23px;
 
   font-size: 21px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 22px;
 }
 
-.feature-block:last-child .feature-name {
-  padding-top: 22px;
+.to-right .feature-name,
+.to-left .feature-name {
+  margin-top: 53px;
 }
 
 .feature-number {
@@ -287,7 +292,7 @@ body {
 
   /* "Поиск гостиницы в Седоне" */
 .features {
-  margin-bottom: 49px;
+  margin-bottom: 48px;
 }
 
 .search-upper {
@@ -363,21 +368,33 @@ body {
   padding: 55px;
 }
 
+@-webkit-keyframes rotate {
+  0% { -webkit-transform: rotateZ(180deg); transform: rotateZ(180deg);}
+  100% { -webkit-transform: rotateZ(0); transform: rotateZ(0);}
+}
+
 @keyframes rotate {
-  0% { transform: rotateZ(180deg);}
-  100% { transform: rotateZ(0);}
+  0% { -webkit-transform: rotateZ(180deg); transform: rotateZ(180deg);}
+  100% { -webkit-transform: rotateZ(0); transform: rotateZ(0);}
 }
 
 .modal-error {
-  animation: turn 0.3s;
+  -webkit-animation: turn 0.3s;
+          animation: turn 0.3s;
+}
+
+@-webkit-keyframes turn {
+  50% { -webkit-transform: rotateX(180deg); transform: rotateX(180deg);}
+  100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
 }
 
 @keyframes turn {
-  50% { transform: rotateX(180deg);}
-  100% { transform: rotateX(0deg); }
+  50% { -webkit-transform: rotateX(180deg); transform: rotateX(180deg);}
+  100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
 }
 
 .search-field {
+  position: relative;
   margin: 0;
   margin-bottom: 26px;
   padding: 0;
@@ -414,9 +431,9 @@ body {
 }
 
 .date-field {
-  width: 278px;
+  width: 316px;
   margin: 0;
-  padding: 6px 15px;
+  padding: 6px 15px 6px 15px;
   padding-bottom: 14px\0;
 }
 
@@ -429,36 +446,24 @@ body {
 }
 
 .calendar-icon {
-  position: relative;
-  display: inline-block;
-
-  width: 38px;
-  height: 38px;
-
-  vertical-align: top;
-  background-color: rgb(242, 242, 242);
-}
-
-.calendar-icon::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 19px;
+  right: 0;
   width: 21px;
   height: 22px;
   transform: translate(-50%, -50%);
 
   background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  background-position: -10px -10px;
+  background-position: -10px -40px;
 }
 
-.calendar-icon:hover::before {
-  background-position: -92px -10px;
+.calendar-icon:hover {
+  background-position: -92px -40px;
 }
 
-.calendar-icon:active::before {
-  background-position: -51px -10px;
+.calendar-icon:active {
+  background-position: -51px -40px;
 }
 
 .search-field:nth-child(3),
@@ -510,37 +515,37 @@ body {
 .minus::before {
   width: 12px;
   height: 3px;
-  background-position: -219px -69px;
-}
-
-.plus::before {
-  width: 11px;
-  height: 11px;
-  background-position: -315px -69px;
+  background-position: -251px -69px;
 }
 
 .minus:hover::before {
   width: 12px;
   height: 3px;
-  background-position: -283px -69px;
+  background-position: -315px -69px;
 }
 
 .minus:active::before {
   width: 12px;
   height: 3px;
-  background-position: -251px -69px;
+  background-position: -283px -69px;
+}
+
+.plus::before {
+  width: 11px;
+  height: 11px;
+  background-position: -143px -92px;
 }
 
 .plus:hover::before {
   width: 11px;
   height: 11px;
-  background-position: -250px -100px;
+  background-position: -251px -92px;
 }
 
 .plus:active::before {
   width: 11px;
   height: 11px;
-  background-position: -219px -100px;
+  background-position: -174px -92px;
 }
 
 .search-btn {
@@ -585,7 +590,7 @@ body {
 
 .select-marks {
   margin: 0;
-  padding-bottom: 33px;
+  padding-bottom: 32px;
   padding-top: 25px;
 }
 
@@ -628,10 +633,10 @@ input[type="checkbox"] + label {
 }
 
 input[type="checkbox"] + label::before {
-  content: "";
+  content: "";/*
   width: 20px;
   height: 20px;
-
+*/
   position: absolute;
   top: 0;
   left: 0;
@@ -640,7 +645,7 @@ input[type="checkbox"] + label::before {
 
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
-  background-position: -133px -10px;
+  background-position: -133px -40px;
 }
 
 input[type="checkbox"]:checked + label::before {
@@ -653,7 +658,7 @@ input[type="checkbox"]:checked + label::before {
 
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
-  background-position: -10px -52px;
+  background-position: -175px -40px;
 }
 
 input[type="checkbox"]:disabled + label::before {
@@ -790,7 +795,7 @@ input[type="checkbox"]:disabled + label::before {
   float: left;
   width: 165px;
   margin: 0;
-  padding: 28px 0;
+  padding: 29px 0;
 
   font-size: 21px;
   font-weight: 700;
@@ -800,7 +805,7 @@ input[type="checkbox"]:disabled + label::before {
 .results-sort {
   float: left;
   width: 760px;
-  padding-top: 33px;
+  padding-top: 34px;
   padding-bottom: 31px;
 
   font-size: 0;
@@ -848,8 +853,8 @@ input[type="checkbox"]:disabled + label::before {
   float: right;
   max-width: 50px;
   padding: 0;
-  padding-top: 36px;
-  padding-bottom: 29px;
+  padding-top: 37px;
+  padding-bottom: 28px;
 
   font-size: 0;
 }
@@ -858,61 +863,81 @@ input[type="checkbox"]:disabled + label::before {
   position: relative;
   display: inline-block;
   width: 15px;
-  margin: 0;
+  margin-left: 5px;
   padding: 0;
 
   vertical-align: top;
+  text-decoration: none;
 }
 
-.arrows .arrow-up {
-  margin-right: 5px;
-}
-
-.arrows .arrow-up::before {
+.arrow-up::before {
   content: "";
   position: absolute;
-  width: 0;
-  height: 0;
+  top: 0;
+  left: 0;
+  width: 11px;
+  height: 10px;
 
-  border: 7px solid rgb(204, 204, 204);
-  border-top: 0;
-  border-right-color: transparent;
-  border-left-color: transparent;
+  background-image: url("../img/sprite.png");
+  background-position: -103px -10px;
 }
 
-.arrows .arrow-up:hover::before {
-  border-bottom-color: rgb(0, 0, 0);
+.arrow-up:hover::before {
+  background-position: -165px -10px;
 }
 
-.arrows .arrow-up:active::before {
-  border-bottom-color: rgb(129, 179, 210);
+.arrow-up:active::before {
+  background-position: -134px -10px;
 }
 
-.arrows .arrow-down::before {
+.active-arrow.arrow-up::before,
+.active-arrow.arrow-up:hover::before,
+.active-arrow.arrow-up:active::before {
   content: "";
   position: absolute;
-  width: 0;
-  height: 0;
+  top: 0;
+  left: 0;
+  width: 11px;
+  height: 10px;
 
-  border: 7px solid rgb(204, 204, 204);
-  border-bottom: 0;
-  border-right-color: transparent;
-  border-left-color: transparent;
+  background-image: url("../img/sprite.png");
+  background-position: -165px -10px;
 }
 
-.arrows .arrow-down:hover::before {
-  border-top-color: rgb(0, 0, 0);
+.arrow-down::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11px;
+  height: 10px;
+
+  background-image: url("../img/sprite.png");
+  background-position: -10px -10px;
 }
 
-.arrows .arrow-down:active::before {
-  border-top-color: rgb(129, 179, 210);
+.arrow-down:hover::before {
+  background-position: -72px -10px;
 }
 
-.arrows .active-arrow::before,
-.arrows .active-arrow:hover::before,
-.arrows .active-arrow:active::before {
-  border-bottom-color: rgb(129, 179, 210);
-  border-top-color: rgb(129, 179, 210);
+.arrow-down:active::before {
+  background-position: -41px -10px;
+}
+
+.active-arrow.arrow-down::before,
+.active-arrow.arrow-down:hover::before,
+.active-arrow.arrow-down:active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11px;
+  height: 10px;
+
+  background-image: url("../img/sprite.png");
+  width: 11px;
+  height: 10px;
+  background-position: -72px -10px;
 }
 
 .results ul {
@@ -938,7 +963,7 @@ input[type="checkbox"]:disabled + label::before {
 .hotel {
   position: relative;
   padding-left: 166px;
-  padding-top: 24px;
+  padding-top: 25px;
   padding-bottom: 31px;
 
   font-size: 14px;
@@ -947,8 +972,9 @@ input[type="checkbox"]:disabled + label::before {
   color: rgb(0, 0, 0);
 }
 
-.hotel a {
+.hotel-name a {
   text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
 .hotel-name {
@@ -960,14 +986,13 @@ input[type="checkbox"]:disabled + label::before {
   font-weight: 700;
   line-height: 26px;
   text-align: left;
-  color: rgb(0, 0, 0);
 }
 
-.hotel-name:hover {
+.hotel-name a:hover {
   color: rgb(129, 179, 210)
 }
 
-.hotel-name:active {
+.hotel-name a:active {
   color: rgb(178, 178, 178);
 }
 
@@ -1048,7 +1073,7 @@ input[type="checkbox"]:disabled + label::before {
 .results-list:first-child .result-rating::before {
   content: "";
   position: absolute;
-  top: -61px;
+  top: -62px;
   right: 0;
   width: 92px;
   height: 21px;
@@ -1060,7 +1085,7 @@ input[type="checkbox"]:disabled + label::before {
 .results-list:nth-child(2) .result-rating::before {
   content: "";
   position: absolute;
-  top: -61px;
+  top: -62px;
   right: 0;
   width: 46px;
   height: 21px;
@@ -1072,7 +1097,7 @@ input[type="checkbox"]:disabled + label::before {
 .results-list:last-child .result-rating::before {
   content: "";
   position: absolute;
-  top: -61px;
+  top: -62px;
   right: 0;
   width: 69px;
   height: 21px;
@@ -1104,7 +1129,10 @@ input[type="checkbox"]:disabled + label::before {
 /* Футер сайта */
 
 footer {
-  background-color: : rgba(254, 254, 254, 0.5);
+  background-color: rgba(254, 254, 254, 0.5);
+}
+
+.main-footer {
   opacity: 0.9;
 }
 
@@ -1172,19 +1200,19 @@ footer .container {
 .social-btn-twitter::before {
   width: 17px;
   height: 15px;
-  background-position: -143px -137px;
+  background-position: -282px -92px;
 }
 
 .social-btn-youtube::before {
   width: 20px;
   height: 16px;
-  background-position: -180px -137px;
+  background-position: -319px -92px;
 }
 
 .social-btn-fb::before {
   width: 10px;
   height: 19px;
-  background-position: -189px -69px;
+  background-position: -221px -69px;
 }
 
 .footer-copyright {
@@ -1201,7 +1229,7 @@ footer .container {
 
   font-size: 14px;
   font-weight: 400;
-  line-height: : 26px;
+  line-height: 26px;
 }
 
 .copyright {
@@ -1218,13 +1246,13 @@ footer .container {
   height: 39px;
 
   background: url("../img/sprite.png") no-repeat center center;
-  background-position: -56px -52px;
+  background-position: -10px -82px;
 }
 
 .copyright:hover::before {
-  background-position: -189px -10px;
+  background-position: -221px -10px;
 }
 
 .copyright:active::before {
-  background-position: -10px -111px;
+  background-position: -10px -141px;
 }
