@@ -7,7 +7,6 @@ body {
   width: 1200px;
   margin: 0 auto;
   padding: 0;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -15,8 +14,7 @@ body {
   text-transform: uppercase;
   color: rgb(0, 0, 0);
   background-color: #F2F2F2;
-  box-shadow:
-              5px 0px 5px 0px rgba(169, 169, 169, 0.5),
+  box-shadow: 5px 0px 5px 0px rgba(169, 169, 169, 0.5),
               -5px 0px 5px 0px rgba(169, 169, 169, 0.5);
 }
 
@@ -39,17 +37,9 @@ body {
 }
 
   /*  HEADER  */
-
-.main-header {
-}
-
-.menu-block {
-}
-
 .menu-block ul {
   margin: 0;
   padding: 0;
-
   font-size: 0;
   list-style: none;
 }
@@ -58,7 +48,6 @@ body {
   display: inline-block;
   width: 240px;
   padding: 14px 0;
-
   vertical-align: top;
 }
 
@@ -138,7 +127,6 @@ body {
 
 .features-title {
   margin-bottom: 27px;
-
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
@@ -147,7 +135,6 @@ body {
 
 .features-begin {
   margin-bottom: 54px;
-
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
@@ -159,7 +146,6 @@ body {
   width: 400px;
   min-height: 256px;
   padding: 0;
-
   text-align: center;
   vertical-align: top;
 }
@@ -174,9 +160,8 @@ body {
   float: left;
   width: 400px;
   min-height: 256px;
-
-  background-color: rgb(129, 179, 210);
   color: #ffffff;
+  background-color: rgb(129, 179, 210);
 }
 
 .feature-block:last-child {
@@ -203,14 +188,12 @@ body {
   float: right;
   width: 400px;
   height: 256px;
-
-  background-color: rgb(129, 179, 210);
   color: #ffffff;
+  background-color: rgb(129, 179, 210);
 }
 
 .feature-text {
   width: 400px;
-
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -220,7 +203,6 @@ body {
   margin-top: 45px;
   padding: 0;
   margin-bottom: 23px;
-
   font-size: 21px;
   font-weight: 700;
   line-height: 22px;
@@ -252,7 +234,6 @@ body {
 .benefit .feature-name {
   padding-top: 138px;
   margin-bottom: 20px;
-
   font-size: 21px;
   line-height: 24px;
 }
@@ -264,7 +245,6 @@ body {
   left: 160px;
   width: 75px;
   height: 72px;
-
   background: url("../img/house.png") no-repeat;
 }
 
@@ -275,7 +255,6 @@ body {
   left: 160px;
   width: 74px;
   height: 70px;
-
   background: url("../img/food.png") no-repeat;
 }
 
@@ -285,7 +264,6 @@ body {
   left: 165px;
   width: 64px;
   height: 76px;
-
   background: url("../img/souvenirs.png") no-repeat;
 }
 
@@ -323,7 +301,6 @@ body {
   width: 100%;
   padding-top: 33px;
   padding-bottom: 33px;
-
   text-align: center;
   vertical-align: center;
   font-size: 21px;
@@ -341,7 +318,6 @@ body {
   height: 590px;
   overflow: hidden;
   position: relative;
-
   background-image: url("../img/map.jpg");
 }
 
@@ -351,10 +327,8 @@ body {
   left: 50%;
   margin-left: -284px;
   width: 568px;
-
   display: block;
   text-align: center;
-
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 5px 10px 5px rgba(169, 169, 169, 0.5);
 }
@@ -367,7 +341,7 @@ body {
   display: block;
   z-index: 1000;
   -webkit-animation: down 0.5s;
-          animation: down 0.5s;
+  animation: down 0.5s;
 }
 
 .modal-content form {
@@ -386,7 +360,7 @@ body {
 
 .modal-error {
   -webkit-animation: turn 0.3s;
-          animation: turn 0.3s;
+  animation: turn 0.3s;
 }
 
 @-webkit-keyframes turn {
@@ -412,7 +386,6 @@ body {
   width: 111px;
   margin: 0;
   padding: 7px 0;
-
   vertical-align: top;
   text-align: left;
   font-size: 14px;
@@ -459,7 +432,6 @@ body {
   width: 21px;
   height: 22px;
   transform: translate(-50%, -50%);
-
   background-image: url("../img/sprite.png");
   background-position: -10px -40px;
 }
@@ -476,7 +448,6 @@ body {
 .search-field:nth-child(4) {
   display: inline-block;
   margin-bottom: 55px;
-
   vertical-align: top;
 }
 
@@ -513,7 +484,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
 }
@@ -558,7 +528,6 @@ body {
   display: inline-block;
   padding: 15px 30px;
   width: 100%;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   font-weight: 700;
@@ -602,7 +571,6 @@ body {
 .select-marks h3 {
   margin: 0;
   padding: 0;
-
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
@@ -644,7 +612,6 @@ input[type="checkbox"] + label::before {
   left: 0;
   width: 22px;
   height: 22px;
-
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   background-position: -133px -40px;
@@ -657,7 +624,6 @@ input[type="checkbox"]:checked + label::before {
   left: 0;
   width: 26px;
   height: 22px;
-
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   background-position: -175px -40px;
@@ -674,7 +640,6 @@ input[type="checkbox"]:disabled + label::before {
 
 .price-field h3 {
   margin-bottom: 9px;
-
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
@@ -685,7 +650,6 @@ input[type="checkbox"]:disabled + label::before {
   height: 36px;
   margin-left: 11px;
   margin-bottom: 20px;
-
   font-size: 0;
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -696,7 +660,6 @@ input[type="checkbox"]:disabled + label::before {
   position: absolute;
   top: 50%;
   left: 50%;
-
   width: 2px;
   height: 22px;
   background-color: #ffffff;
@@ -705,7 +668,6 @@ input[type="checkbox"]:disabled + label::before {
 
 .price-control label {
   display: inline-block;
-
   font-size: 14px;
   line-height: 38px;
   vertical-align: top;
@@ -722,7 +684,6 @@ input[type="checkbox"]:disabled + label::before {
   width: 50px;
   margin: 0;
   padding-bottom: 14px\0;
-
   color: inherit;
   font: inherit;
   background: none;
@@ -737,14 +698,12 @@ input[type="checkbox"]:disabled + label::before {
 
 .range-control .scale {
   height: 2px;
-
   background: rgba(255, 255, 255, 0.3);
 }
 
 .range-control .bar {
   width: 80%;
   height: 2px;
-
   background: #ffffff;
 }
 
@@ -753,7 +712,6 @@ input[type="checkbox"]:disabled + label::before {
   top: -9px;
   width: 4px;
   height: 4px;
-
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
@@ -777,7 +735,6 @@ input[type="checkbox"]:disabled + label::before {
   display: block;
   margin: 0 auto;
   padding: 6px 33px;
-
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
@@ -798,7 +755,6 @@ input[type="checkbox"]:disabled + label::before {
   width: 165px;
   margin: 0;
   padding: 29px 0;
-
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
@@ -807,9 +763,8 @@ input[type="checkbox"]:disabled + label::before {
 .results-sort {
   float: left;
   width: 760px;
-  padding-top: 34px;
+  padding-top: 36px;
   padding-bottom: 31px;
-
   font-size: 0;
 }
 
@@ -817,7 +772,6 @@ input[type="checkbox"]:disabled + label::before {
   display: inline-block;
   margin: 0;
   margin-right: 38px;
-
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -827,7 +781,6 @@ input[type="checkbox"]:disabled + label::before {
 .sort-type {
   display: inline-block;
   margin-right: 33px;
-
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -857,7 +810,6 @@ input[type="checkbox"]:disabled + label::before {
   padding: 0;
   padding-top: 37px;
   padding-bottom: 28px;
-
   font-size: 0;
 }
 
@@ -867,7 +819,6 @@ input[type="checkbox"]:disabled + label::before {
   width: 15px;
   margin-left: 5px;
   padding: 0;
-
   vertical-align: top;
   text-decoration: none;
 }
@@ -879,7 +830,6 @@ input[type="checkbox"]:disabled + label::before {
   left: 0;
   width: 11px;
   height: 10px;
-
   background-image: url("../img/sprite.png");
   background-position: -103px -10px;
 }
@@ -901,7 +851,6 @@ input[type="checkbox"]:disabled + label::before {
   left: 0;
   width: 11px;
   height: 10px;
-
   background-image: url("../img/sprite.png");
   background-position: -165px -10px;
 }
@@ -913,7 +862,6 @@ input[type="checkbox"]:disabled + label::before {
   left: 0;
   width: 11px;
   height: 10px;
-
   background-image: url("../img/sprite.png");
   background-position: -10px -10px;
 }
@@ -935,10 +883,7 @@ input[type="checkbox"]:disabled + label::before {
   left: 0;
   width: 11px;
   height: 10px;
-
   background-image: url("../img/sprite.png");
-  width: 11px;
-  height: 10px;
   background-position: -72px -10px;
 }
 
@@ -983,7 +928,6 @@ input[type="checkbox"]:disabled + label::before {
   margin: 0;
   margin-bottom: 7px;
   padding: 0;
-
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
@@ -1004,7 +948,6 @@ input[type="checkbox"]:disabled + label::before {
   margin-right: 10px;
   margin-bottom: 14px;
   padding: 0;
-
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -1018,7 +961,6 @@ input[type="checkbox"]:disabled + label::before {
   display: inline-block;
   margin-right: 8px;
   padding: 3px 17px;
-
   font-size: 14px;
   font-weight: 700;
   text-align: center;
@@ -1061,10 +1003,8 @@ input[type="checkbox"]:disabled + label::before {
   content: "";
   bottom: 33px;
   right: 0;
-
   width: 110px;
   padding-top: 4px;
-
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -1079,7 +1019,6 @@ input[type="checkbox"]:disabled + label::before {
   right: 0;
   width: 92px;
   height: 21px;
-
   background-image: url("../img/stars.png");
   background-repeat: repeat-x;
 }
@@ -1091,7 +1030,6 @@ input[type="checkbox"]:disabled + label::before {
   right: 0;
   width: 46px;
   height: 21px;
-
   background-image: url("../img/stars.png");
   background-repeat: repeat-x;
 }
@@ -1103,7 +1041,6 @@ input[type="checkbox"]:disabled + label::before {
   right: 0;
   width: 69px;
   height: 21px;
-
   background-image: url("../img/stars.png");
   background-repeat: repeat-x;
 }
@@ -1148,7 +1085,6 @@ footer .container {
   width: 400px;
   padding-top: 46px;
   padding-bottom: 46px;
-
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -1160,7 +1096,6 @@ footer .container {
   width: 400px;
   padding-top: 37px;
   padding-bottom: 37px;
-
   text-align: center;
   font-size: 0;
 }
@@ -1171,7 +1106,6 @@ footer .container {
   width: 46px;
   height: 46px;
   margin-right: 6px;
-
   font-size: 0;
   vertical-align: top;
   background-color: rgb(129, 179, 210);
@@ -1248,10 +1182,8 @@ footer .container {
   position: absolute;
   top: -5px;
   left: 0;
-
   width: 113px;
   height: 39px;
-
   background: url("../img/sprite.png") no-repeat center center;
   background-position: -10px -82px;
 }
