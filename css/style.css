@@ -25,6 +25,7 @@ body {
 }
 
 .container {
+  position: relative;
   width: 1056px;
   margin: 0 auto;
   padding: 0 72px;
@@ -37,6 +38,7 @@ body {
 }
 
   /*  HEADER  */
+
 .menu-block ul {
   margin: 0;
   padding: 0;
@@ -107,16 +109,21 @@ body {
 
 .promo {
   position: relative;
-  min-height: 507px;
-  margin: 0;
-  margin-bottom: 58px;
-  background:  rgb(66, 119, 160) url("../img/promo.jpg") no-repeat center bottom;
-  background-size: cover;
+  height: 507px;
+  margin-bottom: 59px;
+  overflow: hidden;
+}
+
+.promo img {
+  -webkit-transform: translateY(-58px);
+  transform: translateY(-58px);
+  background-color: rgb(66, 119, 160);
 }
 
 .promo:before {
   content: "";
   position: absolute;
+  z-index: 100;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -126,7 +133,8 @@ body {
 }
 
 .features-title {
-  margin-bottom: 27px;
+  width: 500px;
+  margin: 0 auto 27px;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
@@ -134,7 +142,7 @@ body {
 }
 
 .features-begin {
-  margin-bottom: 54px;
+  margin-bottom: 53px;
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
@@ -156,6 +164,15 @@ body {
   font-size: 0;
 }
 
+.feature-block:first-child,
+.feature-block:nth-child(3) {
+  background-color: rgb(129, 179, 210);
+}
+
+.feature-block:last-child {
+  background-color: rgb(238, 238, 238)
+}
+
 .to-left {
   float: left;
   width: 400px;
@@ -164,32 +181,38 @@ body {
   background-color: rgb(129, 179, 210);
 }
 
-.feature-block:last-child {
-  background-color: rgb(238, 238, 238)
-}
-
-.city-image {
-  float: right;
-  width: 800px;
-  height: 256px;
-  background: url("../img/city.jpg") no-repeat center center;
-  background-size: 800px auto;
-}
-
-.bridge-image {
-  float: left;
-  width: 800px;
-  height: 256px;
-  background: url("../img/bridge.jpg") no-repeat center center;
-  background-size: 800px auto;
-}
-
 .to-right {
   float: right;
   width: 400px;
-  height: 256px;
+  min-height: 256px;
   color: #ffffff;
   background-color: rgb(129, 179, 210);
+}
+.city-image {
+  position: relative;
+  float: right;
+  width: 800px;
+  min-height: 256px;
+  overflow: hidden;
+}
+
+.bridge-image {
+  position: relative;
+  float: left;
+  width: 800px;
+  min-height: 256px;
+  overflow: hidden;
+}
+
+.city-image img,
+.bridge-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  margin: auto;
 }
 
 .feature-text {
@@ -200,9 +223,8 @@ body {
 }
 
 .feature-text .feature-name {
-  margin-top: 45px;
-  padding: 0;
-  margin-bottom: 23px;
+  width: 150px;
+  margin: 45px auto 23px;
   font-size: 21px;
   font-weight: 700;
   line-height: 22px;
@@ -218,28 +240,35 @@ body {
 }
 
 .feature-desc {
-  margin-right: 48px;
-  margin-left: 48px;
+  width: 305px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.feature-block:last-child .feature-desc {
+  width: 265px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .benefit {
   position: relative;
   min-height: 330px;
-
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
 }
 
 .benefit .feature-name {
+  width: 120px;
+  margin: 20px auto 23px;
   padding-top: 138px;
-  margin-bottom: 20px;
   font-size: 21px;
   line-height: 24px;
 }
 
 .feature-block .benefit:first-child:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 60px;
   left: 160px;
@@ -249,7 +278,7 @@ body {
 }
 
 .feature-block .benefit:nth-child(2):before {
-  content: '';
+  content: "";
   position: absolute;
   top: 60px;
   left: 160px;
@@ -259,7 +288,7 @@ body {
 }
 
 .feature-block .benefit:last-child:before {
-  content: '';
+  content: "";
   position: absolute;  top: 55px;
   left: 165px;
   width: 64px;
@@ -277,7 +306,6 @@ body {
   width: 568px;
   margin-right: auto;
   margin-left: auto;
-
   text-align: center;
 }
 
@@ -299,11 +327,13 @@ body {
 .search-header a {
   display: block;
   width: 100%;
-  padding-top: 33px;
-  padding-bottom: 33px;
+  padding-top: 31px;
+  padding-bottom: 30px;
   text-align: center;
   vertical-align: center;
   font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
   color: rgb(255, 255, 255);
   background-color: rgb(118, 99, 87);
   text-decoration: none;
@@ -490,7 +520,6 @@ body {
   display: inline-block;
   width: 38px;
   height: 38px;
-
   vertical-align: top;
   background-color: rgb(242, 242, 242);
 }
@@ -546,6 +575,7 @@ body {
   display: inline-block;
   padding: 15px 30px;
   width: 100%;
+  vertical-align: top;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   font-weight: 700;
@@ -687,9 +717,9 @@ input[type="checkbox"]:disabled + label::before {
 
 .price-control label {
   display: inline-block;
+  vertical-align: top;
   font-size: 14px;
   line-height: 38px;
-  vertical-align: top;
   cursor: pointer;
 }
 
@@ -791,19 +821,19 @@ input[type="checkbox"]:disabled + label::before {
   display: inline-block;
   margin: 0;
   margin-right: 38px;
+  vertical-align: top;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  vertical-align: top;
 }
 
 .sort-type {
   display: inline-block;
   margin-right: 33px;
+  vertical-align: top;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  vertical-align: top;
   text-decoration: none;
   color: rgb(177, 177, 177);
   border-bottom: 1px dotted rgb(129, 179, 210);
@@ -967,6 +997,7 @@ input[type="checkbox"]:disabled + label::before {
   margin-right: 10px;
   margin-bottom: 14px;
   padding: 0;
+  vertical-align: top;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -980,10 +1011,10 @@ input[type="checkbox"]:disabled + label::before {
   display: inline-block;
   margin-right: 8px;
   padding: 3px 17px;
-  font-size: 14px;
-  font-weight: 700;
   text-align: center;
   vertical-align: top;
+  font-size: 14px;
+  font-weight: 700;
   color: rgb(254, 254, 254);
   text-decoration: none;
   border: none;
@@ -1125,8 +1156,8 @@ footer .container {
   width: 46px;
   height: 46px;
   margin-right: 6px;
-  font-size: 0;
   vertical-align: top;
+  font-size: 0;
   background-color: rgb(129, 179, 210);
 }
 
@@ -1192,9 +1223,9 @@ footer .container {
 .copyright {
   position: relative;
   display: inline-block;
-  vertical-align: top;
   width: 113px;
   height: 39px;
+  vertical-align: top;
 }
 
 .copyright::before {
